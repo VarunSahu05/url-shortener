@@ -1,0 +1,324 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+}
+
+.shortener-container {
+    width: 90%;
+    max-width: 700px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.shortener-container h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.shortener-container p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+}
+
+form input {
+    flex: 1;
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+form button,
+.short-url button {
+    padding: 14px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+form button {
+    background: #2563eb;
+    color: white;
+}
+
+form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.result {
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+}
+
+.short-url {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.short-url a {
+    color: #2563eb;
+}
+
+.short-url button {
+    background: #111827;
+    color: white;
+}
+
+.error {
+    margin-top: 20px;
+    color: #dc2626 !important;
+}
+
+.url-list {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.url-list h2 {
+    margin-bottom: 20px;
+}
+
+.url-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.original-url {
+    margin-bottom: 8px !important;
+    color: #333 !important;
+    word-break: break-all;
+}
+
+.url-card a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.url-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #666;
+    white-space: nowrap;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.history-header h2 {
+    margin: 0;
+}
+
+.clear-button,
+.delete-button {
+    border: none;
+    border-radius: 6px;
+    padding: 8px 14px;
+    cursor: pointer;
+}
+
+.clear-button {
+    background: #dc2626;
+    color: white;
+}
+
+.delete-button {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.url-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.url-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #666;
+}
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.login-page h1 {
+    font-size: 42px;
+}
+
+.login-page p {
+    color: #666;
+}
+
+.navbar {
+    width: 100%;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-bottom: 1px solid #eee;
+}
+
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-picture {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.logout-button {
+    border: none;
+    background: #111827;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   Mobile Responsive Design
+    ========================= */
+ @media (max-width: 600px) {
+
+    /* Navbar */
+    .navbar {
+        padding: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .user-section {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    /* Main content */
+    .url-shortener {
+        padding: 30px 15px;
+    }
+
+    .url-shortener h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .url-shortener p {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    /* URL form */
+    .url-form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .url-form input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .url-form button {
+        width: 100%;
+    }
+
+    /* History */
+    .history-section {
+        padding: 20px 15px;
+    }
+
+    .history-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    /* URL card */
+    .url-card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    /* URL text */
+    .original-url,
+    .short-url {
+        width: 100%;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    /* Analytics information */
+    .url-stats {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    /* Actions */
+    .url-actions {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .delete-button {
+        width: 100%;
+    }
+
+    .clear-button {
+        width: 100%;
+    }
+}
