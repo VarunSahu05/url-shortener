@@ -53,9 +53,7 @@ function UrlList() {
                 `${import.meta.env.VITE_API_URL}/api/urls`,
                 {
                     method: "DELETE",
-                    headers: {
-                        Authorization: `Bearer ${localStorage.getItem("token")}`
-                    }
+                    credentials: "include"
                 }
             );
 
